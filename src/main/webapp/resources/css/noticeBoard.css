@@ -1,0 +1,49 @@
+.divArea {
+    width: 100%;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.noticDiv > h2 {
+    text-align: center;
+}
+.nbList {
+    width: 80%;
+    margin: auto;
+}
+.nbList ul {
+        padding: 0;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        background-color: #F9F5F6;
+    }
+    .nbList li {
+        width: 70px;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-right: 1px solid #ccc;
+    }
+    .nbList li:last-child {
+        border-right: 0;
+    }
+    .nbList li:hover {
+        background: radial-gradient(circle closest-side,#FDCEDF,#F9F5F6);
+    }
+/* 테이블 css */
+.noticeBoard {
+    width: 70%;
+    margin: auto;
+}
+.noticeBoard table {
+    width: 100%;
+    padding-top: 15px;
+}
+.noticeBoard table td {
+    border: 1px solid #ccc;
+}
+.noticeBoard td:last-child, .noticeBoard td:nth-last-child(2)
+, .noticeBoard td:first-child {
+    width: 100px;
+}

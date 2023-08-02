@@ -1,0 +1,58 @@
+.divArea {
+    width: 100%;
+    --height: 800px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    
+}
+.cartDiv {
+    width: 80%;
+    margin: auto;
+}
+.cart_productImg img{
+    width: 200px;
+    height: 200px;
+}
+.cart_head {
+    margin-bottom: 20px;
+}
+/* 테이블 관련 css */
+table td {
+    --border: 1px solid #222;
+    text-align: center;
+}
+table td > input {
+    width: 40px;
+}
+.cart_head table td {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+}
+.cart_head table {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.cart_head table tr:first-child {
+    background-color: #EEF1FF;
+}
+.cart_head table input[type=button] {
+    background-color: #F8E8EE;
+    border: 1px solid #ccc;
+}
+/* 총합계 */
+.cart_foot {
+    width: 100%;
+    text-align: right;
+}
+.sumTotal {
+    background-color: #EEF1FF;
+    padding: 3px;
+}
+/* 버튼부분 */
+.cartBtns > button {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: #F8E8EE;
+    border: 1px solid #ccc;
+}

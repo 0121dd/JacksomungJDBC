@@ -1,0 +1,95 @@
+/* 배너 관련 */
+.banner_wrap input[id*="slide"] {
+    display: none;
+}
+.banner_wrap .img_list {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.banner_wrap .slideList {
+    white-space: nowrap;
+    font-size: 0;
+    padding: 0;
+}
+.banner_wrap a {
+    width: 800px;
+    height: 400px;
+}
+.banner_wrap .slideList > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .5s;
+}
+.banner_wrap .slideList > li > a {
+    display: block;
+    position: relative;
+}
+.banner_wrap .slideList > li > a img {
+    width: 80%;
+    height: 100%;
+}
+/* 슬라이드 버튼 */
+.banner_wrap .slideList label {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
+    cursor: pointer;
+}
+/* 슬라이드 왼쪽 버튼 */
+.banner_wrap .slideList .left {
+    left: 30px;
+    background:url(../image/img/left.png)
+    center center / 50% no-repeat;
+}
+/* 슬라이드 오른쪽 버튼 */
+.banner_wrap .slideList .right {
+    right: 30px;
+    background:url(../image/img/right.png)
+    center center / 50% no-repeat;
+}
+.banner_wrap [id="slide01"]:checked ~ .img_list .slideList > li {
+    transForm: translateX(0%);
+}
+.banner_wrap [id="slide02"]:checked ~ .img_list .slideList > li {
+    transForm: translateX(-100%);
+}
+.banner_wrap [id="slide03"]:checked ~ .img_list .slideList > li {
+    transForm: translateX(-200%);
+}
+/* new items */
+.new_items {
+    width: 100%;
+    text-align: center;
+}
+.nt_img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+/* weekly best */
+.best_items {
+    width: 100%;
+    text-align: center;
+}
+.best_items > ul {
+    padding-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.best_items li {
+    width: 280px;
+    --display: inline-block;
+    margin: 0 10px;
+}
+.bt_box {
+    display: inline-block;
+    height: 350px;
+}
+.bt_box img {
+    width: 200px;
+    height: 250px;
+}

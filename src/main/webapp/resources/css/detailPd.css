@@ -1,0 +1,76 @@
+.divArea {
+    width: 100%;
+    --height: 500px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.detailPdDiv > h2 {
+    text-align: center;
+}
+.detailPdList > ul {
+    padding-left: 20px;
+    margin: 15px;
+    background-color: #F9F5F6;
+}
+.detailPdList li {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+.detailPdList li:last-child {
+    border-right: 0;
+}
+.detailPdList li:hover {
+    background: radial-gradient(circle closest-side,#FDCEDF,#F9F5F6);
+}
+/* 이미지, 가격부분 */
+.pd_top {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+.pd_left > img {
+    width: 350px;
+} 
+.pd_right h3 {
+    margin-left: 40px;
+}
+.pd_right {
+    width: 40%;
+    padding-top: -50px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.pd_right p {
+    font-weight: bold;
+    text-align: right;
+}
+.pd_right table{
+    width: 80%;
+    margin: 30px auto;
+}
+.pd_top > div {
+    display: inline-block;
+}
+/* 버튼 부분 */
+.pd_right_button {
+    text-align: center;
+    margin: 20px;
+}
+.pd_right button {
+    background-color: #F8E8EE;
+    border: 0;
+}
+.pd_right_button > button {
+    width: 100px;
+    height: 35px;
+}
+/* 하단에 상세설명 이미지 부분 */
+.pd_bottom > div {
+    width: 800px;
+    margin: auto;
+}
