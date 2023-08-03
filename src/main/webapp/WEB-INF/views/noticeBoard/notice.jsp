@@ -27,30 +27,14 @@
                                 <td>작성자</td>
                                 <td>작성일</td>
                             </tr>
+                            <c:forEach var="notice" items="${requestScope.nList}">
                             <tr>
-                                <td>253</td>
-                                <td>설연휴 배송공지</td>
-                                <td>작소뭉</td>
-                                <td>2023.01.10</td>
+                                <td>${notice.noticeNo }</td>
+                                <td>${notice.noticeSubject }</td>
+                                <td>${notice.noticeWriter }</td>
+                                <td>${notice.writeDate }</td>
                             </tr>
-                            <tr>
-                                <td>253</td>
-                                <td>설연휴 배송공지</td>
-                                <td>작소뭉</td>
-                                <td>2023.01.10</td>
-                            </tr>
-                            <tr>
-                                <td>253</td>
-                                <td>설연휴 배송공지</td>
-                                <td>작소뭉</td>
-                                <td>2023.01.10</td>
-                            </tr>
-                            <tr>
-                                <td>253</td>
-                                <td>설연휴 배송공지</td>
-                                <td>작소뭉</td>
-                                <td>2023.01.10</td>
-                            </tr>
+                            </c:forEach>
                         </table>
                     </div>
                 </div>

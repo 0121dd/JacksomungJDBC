@@ -8,8 +8,9 @@ import member.model.vo.Member;
 
 public class MemberService {
 	
-	JDBCTemplate jdbcTemplate;
-	MemberDAO mDao;
+	private JDBCTemplate jdbcTemplate;
+	private MemberDAO mDao;
+	
 	public MemberService() {
 		jdbcTemplate = JDBCTemplate.getInstance();
 		mDao = new MemberDAO();
@@ -31,6 +32,18 @@ public class MemberService {
 	public int updateMember(Member mOne) {
 		Connection conn = jdbcTemplate.createConnection();
 		int result = mDao.updateMember(conn, mOne);
+		if(result > 0) {
+			jdbcTemplate.commit(conn);
+		}else {
+			jdbcTemplate.rollback(conn);
+		}
+		jdbcTemplate.close(conn);
+		
+		return result;
+	}
+	public int insertMember(Member member) {
+		Connection conn = jdbcTemplate.createConnection();
+		int result = mDao.insertMember(conn, member);
 		if(result > 0) {
 			jdbcTemplate.commit(conn);
 		}else {

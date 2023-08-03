@@ -23,7 +23,7 @@
 						<li><a href="/member/join.do">회원가입</a></li>
 					</c:if>
 					<li><a href="./product/cart.html">장바구니</a></li>
-					<li><a href="./noticeBoard/customerService.html">고객센터</a></li>
+					<li><a href="/notice/list.do">고객센터</a></li>
 
 				</ul>
 			</div>

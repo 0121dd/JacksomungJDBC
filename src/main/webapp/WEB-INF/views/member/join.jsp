@@ -5,16 +5,27 @@
 <html lang="ko">
 	<jsp:include page="/WEB-INF/views/include/head.jsp"></jsp:include>
     <link rel="stylesheet" href="../resources/css/join.css">
-    <script type="text/javascript">
-    	function check_pw() {
-    		if(documnet.getElementById('member-pw1').value != document.getElementById('member-pw2').value) {
-    			
-    		}
-    	}
-    </script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
     <body>
-        <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
-        <jsp:include page="/WEB-INF/views/include/nav.jsp"></jsp:include>
+		<script>
+/* 			$('.pw').keyup(function() {
+				const pass1 = $('#member-pw1').val;
+				const pass2 = $('#member-pw2').val;
+	
+				if (pass1 != "" || pass2 != "") {
+					if (pass1 == pass2) {
+						$('#checkPw').innerHTML = "비밀번호 일치";
+						$('#checkPw').css("color", "green");
+					} else {
+						$('#checkPw').innerHTML = "비밀번호 불일치";
+						$('#checkPw').css("color", "red");
+					}
+				}
+			})
+*/
+		</script>
+		<jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
+	    <jsp:include page="/WEB-INF/views/include/nav.jsp"></jsp:include>
         <main>
             <div class="divArea">
                 <div class="joinDiv">
@@ -29,21 +40,21 @@
 	                                        <input type="text" id="" name="member-id">
 	                                    </td>
 	                                    <td>
-	                                        <button>중복확인</button>
+	                                        <button >중복확인</button>
 	                                    </td>
 	                                </tr>
 	                                <tr>
 	                                    <td>비밀번호</td>
 	                                    <td colspan="2">
-	                                    	<input type="password" id="member-pw1" name="member-pw1" onchage="check_pw()">
+	                                    	<input type="password" id="member-pw1" name="member-pw1" >
 	                                    </td>
 	                                </tr>
 	                                <tr>
 	                                    <td>비밀번호 확인</td>
-	                                    <td>
-	                                    	<input type="password" id="member-pw2" name="member-pw2" onchage="check_pw()">
+	                                    <td colspan="2">
+	                                    	<input type="password" class="pw" id="member-pw2" name="member-pw2" onkeyup="checkPw()">
+	                                		<span id="checkPw"></span>
 	                                    </td>
-	                                	<td><text id="check"></td>
 	                                </tr>
 	                                <tr>
 	                                    <td>이름</td>
