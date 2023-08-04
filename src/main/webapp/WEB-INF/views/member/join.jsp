@@ -5,24 +5,33 @@
 <html lang="ko">
 	<jsp:include page="/WEB-INF/views/include/head.jsp"></jsp:include>
     <link rel="stylesheet" href="../resources/css/join.css">
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <body>
 		<script>
-/* 			$('.pw').keyup(function() {
-				const pass1 = $('#member-pw1').val;
-				const pass2 = $('#member-pw2').val;
-	
-				if (pass1 != "" || pass2 != "") {
-					if (pass1 == pass2) {
-						$('#checkPw').innerHTML = "비밀번호 일치";
-						$('#checkPw').css("color", "green");
-					} else {
-						$('#checkPw').innerHTML = "비밀번호 불일치";
-						$('#checkPw').css("color", "red");
+		// $(documnet).ready(function(){}); 와 동일한 의미
+			$(function(){
+	 			$('#member-pw2').keyup(function() {
+					const pass1 = $('#member-pw1').val(); 
+					const pass2 = $('#member-pw2').val();
+		
+					if (pass1 != "" || pass2 != "") {
+						if (pass1 == pass2) {
+							$('#checkPw').text("일치");  // .innerHTML는 자바스크립트
+							$('#checkPw').css("color", "green");
+						} else {
+							$('#checkPw').text("불일치");
+							$('#checkPw').css("color", "red");
+						}
 					}
-				}
+				});
+	 			
+	 			$('#checkId').click(function(){
+	 				const id = $('#member-id').val();
+	 				const url = '/member/checkId.do?memberId='+ id;
+	 				location.href = url;
+	 				
+	 			});
 			})
-*/
 		</script>
 		<jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
 	    <jsp:include page="/WEB-INF/views/include/nav.jsp"></jsp:include>
@@ -37,10 +46,10 @@
 	                                <tr>
 	                                    <td>아이디</td>
 	                                    <td>
-	                                        <input type="text" id="" name="member-id">
+	                                        <input type="text" id="member-id" name="member-id" value="${memberId }">
 	                                    </td>
 	                                    <td>
-	                                        <button >중복확인</button>
+	                                        <button id="checkId">중복확인</button>
 	                                    </td>
 	                                </tr>
 	                                <tr>
@@ -52,7 +61,7 @@
 	                                <tr>
 	                                    <td>비밀번호 확인</td>
 	                                    <td colspan="2">
-	                                    	<input type="password" class="pw" id="member-pw2" name="member-pw2" onkeyup="checkPw()">
+	                                    	<input type="password" id="member-pw2" name="member-pw2">
 	                                		<span id="checkPw"></span>
 	                                    </td>
 	                                </tr>

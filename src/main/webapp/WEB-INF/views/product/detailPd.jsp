@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 	<jsp:include page="/WEB-INF/views/include/head.jsp"></jsp:include>
-    <link rel="stylesheet" href="../../resources/css/detailPd.css">
+    <link rel="stylesheet" href="/resources/css/detailPd.css">
     <body>
         <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
         <jsp:include page="/WEB-INF/views/include/nav.jsp"></jsp:include>
@@ -21,7 +21,7 @@
                     <div class="productDetail">
                         <div class="pd_top">
                             <div class="pd_left">
-                                <img src="../../resources/productImg/treadmill03.jpg" alt="쳇바퀴3">
+                                <img src="/resources/image/productImg/treadmill03.jpg" alt="쳇바퀴3">
                             </div>
                             <div>
                             </div>
@@ -58,8 +58,8 @@
                         </div>
                         <div class="pd_bottom"> 
                             <div>
-                                <img src="../../resources/productImg/detailPd.jpg" alt="">
-                                <img src="../../resources/productImg/detailPd1.jpg" alt="">
+                                <img src="/resources/image/productImg/detailPd.jpg" alt="">
+                                <img src="/resources/image/productImg/detailPd1.jpg" alt="">
                             </div>
                         </div>
                     </div>

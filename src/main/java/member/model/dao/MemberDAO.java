@@ -9,7 +9,7 @@ public class MemberDAO {
 	public Member selectCheckLogin(Connection conn, Member member) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		Member mOne = new Member();
+		Member mOne = null;
 		String query = "SELECT * FROM MEMBER_TBL WHERE MEMBER_ID = ? AND MEMBER_PW = ?";
 		try {
 			pstmt = conn.prepareStatement(query);

@@ -45,20 +45,18 @@ public class LoginController extends HttpServlet {
 		
 		MemberService service = new MemberService();
 		Member loginCheck = service.selectCheckLogin(member);
-		RequestDispatcher view = null;
 		if(loginCheck != null) {
 			//세션에 저장
 			HttpSession session = request.getSession();
 			session.setAttribute("memberId", loginCheck.getMemberId());
 			session.setAttribute("memberName", loginCheck.getMemberName());
-			view = request.getRequestDispatcher("/index.jsp");
+			response.sendRedirect("/index.jsp");
 		}else {
 			request.setAttribute("msg", "로그인 실패!");
-			request.setAttribute("url", "/index.jsp");
-			view = request.getRequestDispatcher("/WEB-INF/views/member/serviceFailed.jsp");
+			request.setAttribute("url", "/member/login.do");
+			request.getRequestDispatcher("/WEB-INF/views/member/serviceFailed.jsp").forward(request, response);
 			
 		}
-		view.forward(request, response);
 	}
 
 }

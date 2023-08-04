@@ -36,7 +36,7 @@
                             </li>
                             <li>
                                 <div class="bt_box">
-                                    <a href="../product/detailPd.html">
+                                    <a href="/product/detail.do">
                                         <img src="../resources/image/productImg/treadmill03.jpg" alt="">
                                     </a>
                                     <p class="name">우드 쳇바퀴1</p>

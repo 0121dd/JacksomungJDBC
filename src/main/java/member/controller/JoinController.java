@@ -53,8 +53,8 @@ public class JoinController extends HttpServlet {
 			response.sendRedirect("/index.jsp");
 		}else {
 			// 실패
-			request.setAttribute("msg", "로그인 실패!");
-			request.setAttribute("url", "/index.jsp");
+			request.setAttribute("msg", "회원가입이 완료되지 않았습니다.");
+			request.setAttribute("url", "/member/join.do");
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/member/serviceFailed.jsp");
 			view.forward(request, response);
 		}

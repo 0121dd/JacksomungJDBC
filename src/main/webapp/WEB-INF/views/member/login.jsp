@@ -29,7 +29,7 @@
                     </form>
                     <div class="login_bottom">
                         <ul>
-                            <li><a href="">회원가입</a></li>
+                            <li><a href="/member/join.do">회원가입</a></li>
                             <li><a href="">아이디찾기</a></li>
                             <li><a href="">비밀번호 찾기</a></li>
                         </ul>
