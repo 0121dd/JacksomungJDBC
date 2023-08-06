@@ -8,8 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <body>
 		<script>
-		// $(documnet).ready(function(){}); 와 동일한 의미
-			$(function(){
+		// $(documnet).ready(function(){}); 와 동일한 의미 (jQuery)
+			$(function(){ // 즉시 실행 함수
 	 			$('#member-pw2').keyup(function() {
 					const pass1 = $('#member-pw1').val(); 
 					const pass2 = $('#member-pw2').val();
